@@ -1,22 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { useTheme } from "@emotion/react";
+import Avatar from "./components/common/Avatar";
+import Typography from "./components/common/Typography";
+import MediaBox from "./components/MediaBox";
+import { convertCss } from "./utils/tools";
 
 function App() {
+  const theme = useTheme();
+  console.log(
+    convertCss({
+      textColor: "test",
+    })
+  );
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div>
+      <header>
+        test
+        <MediaBox />
+        <Avatar
+          size={48}
+          shape='circular'
+          src='https://lh3.googleusercontent.com/ogw/ADea4I55DKaBW9Mv-YbchLYwqmL50WVGXqAf8v7WQ5dbmg=s32-c-mo'
+        />
+        <Typography>test</Typography>
       </header>
     </div>
   );
