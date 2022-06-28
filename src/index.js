@@ -6,7 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import createCache from "@emotion/cache";
 import { CacheProvider, jsx, css, ThemeProvider } from "@emotion/react";
 
-const key = "custom";
+const key = "kkn";
 const cache = createCache({ key });
 
 const theme = {
@@ -20,6 +20,7 @@ const theme = {
     white: "#ffffff",
     dark: "#2a2a2a",
     gray: "#ebebeb",
+    ghost: "transparent",
   },
 };
 

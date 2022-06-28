@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.w3.org/2000/svg">
+  <xs:element name="svg">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="g">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="path">
+                <xs:complexType>
+                  <xs:attribute name="d" use="required" />
+                  <xs:attribute name="class" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="class" use="required" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="viewBox" use="required" />
+      <xs:attribute name="preserveAspectRatio" use="required" />
+      <xs:attribute name="focusable" type="xs:boolean" use="required" />
+      <xs:attribute name="class" use="required" />
+      <xs:attribute name="style" use="required" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
