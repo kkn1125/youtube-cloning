@@ -1,9 +1,12 @@
 {
-  "presets": [
+  "plugins": [
     [
-      "@babel/preset-react",
-      { "runtime": "automatic", "importSource": "@emotion/react" }
+      "@babel/plugin-transform-react-jsx",
+      {
+        "throwIfNamespace": false, // defaults to true
+        "runtime": "automatic", // defaults to classic
+        "importSource": "theme-ui" // defaults to react
+      }
     ]
-  ],
-  "plugins": ["@emotion/babel-plugin"]
+  ]
 }
