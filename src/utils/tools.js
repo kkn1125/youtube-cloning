@@ -1,4 +1,5 @@
 import styling from "@emotion/styled";
+import { Fragment } from "react";
 
 export const convertCss = (styleObj) =>
   Object.fromEntries(
@@ -33,7 +34,8 @@ SHAPE[(SHAPE["rect"] = 0)] = "rect";
 SHAPE[(SHAPE["circle"] = 100)] = "circle";
 SHAPE[(SHAPE["rounded"] = 5)] = "rounded";
 
-export const replaceSize = (size) => (SIZE[size] === undefined ? "normal" : size);
+export const replaceSize = (size) =>
+  SIZE[size] === undefined ? "normal" : size;
 
 export const parsedStyle = (color, size, variant, theme) => ({
   fontSize: 16 * SIZE[replaceSize(size)],
@@ -44,5 +46,16 @@ export const parsedStyle = (color, size, variant, theme) => ({
   color: theme.palette[contrastColor[color] ? "white" : "dark"],
   borderRadius: SHAPE[variant],
   padding: `${SIZE[replaceSize(size)] * 5}px ${SIZE[replaceSize(size)] * 10}px`,
-  
 });
+
+export const sliceMap = (array, predicate, wrapper, sliceAmount) => {
+  return new Array(sliceAmount)
+    .fill(array)
+    .map((arr, idx) => (
+      <Fragment key={idx}>
+        {wrapper(
+          arr.slice(sliceAmount * idx, sliceAmount * (idx + 1)).map(predicate)
+        )}
+      </Fragment>
+    ));
+};
