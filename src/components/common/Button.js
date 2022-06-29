@@ -1,3 +1,5 @@
+/** @jsxImportSource @emotion/react */
+import { css, jsx } from "@emotion/react";
 import styled from "@emotion/styled";
 import React from "react";
 import { parsedStyle, replaceSize, SIZE } from "../../utils/tools";
@@ -6,6 +8,7 @@ function Button({
   color = "info",
   size = "normal",
   variant = "rounded",
+  style,
   children,
 }) {
   const Block = styled("button")(({ theme }) => ({
@@ -25,6 +28,7 @@ function Button({
       filter: `brightness(105%)`,
       boxShadow: `0 0 0 4.5px ${theme.palette[color]}85`,
     },
+    ...style,
   }));
   return <Block>{children}</Block>;
 }

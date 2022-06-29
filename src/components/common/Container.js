@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import React from "react";
+import React, { forwardRef } from "react";
 
 const resposive = {
   xs: "70%",
@@ -11,13 +11,17 @@ const resposive = {
   full: "100%",
 };
 
-function Container({ maxWidth = "lg", css, children }) {
-  const Block = styled("div")(({ theme }) => ({
-    width: resposive[maxWidth],
-    margin: "auto",
-    ...css,
-  }));
-  return <Block>{children}</Block>;
-}
+const Container = forwardRef(
+  ({ maxWidth = "lg", css, style, children }, ref) => {
+    const Block = styled("div")(({ theme }) => ({
+      width: resposive[maxWidth],
+      marginLeft: "auto",
+      marginRight: "auto",
+      ...css,
+      ...style,
+    }));
+    return <Block ref={ref}>{children}</Block>;
+  }
+);
 
 export default Container;

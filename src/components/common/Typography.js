@@ -7,11 +7,11 @@ const type = {
   },
 };
 
-function Typography({ variant, component, children }) {
+function Typography({ variant, component, style, children }) {
   const Block = styled(component || "div")`
     ${type[variant]}
   `;
-  return <Block>{children}</Block>;
+  return <Block style={style}>{children}</Block>;
 }
 
 export default Typography;

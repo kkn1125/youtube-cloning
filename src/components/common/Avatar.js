@@ -7,7 +7,13 @@ const frame = {
   rectangle: "0px",
 };
 
-function Avatar({ size, shape, outline, src, alt = "sample" }) {
+function Avatar({
+  size = 36,
+  shape = "circular",
+  outline = false,
+  src,
+  alt = "sample",
+}) {
   const Block = styled(src ? "img" : "div")`
     width: ${size}px;
     height: ${size}px;

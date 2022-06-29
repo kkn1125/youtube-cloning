@@ -6,14 +6,16 @@ function Badge({
   color = "info",
   size = "normal",
   variant = "rounded",
+  style,
   children,
 }) {
   const Block = styled("div")(({ theme }) => ({
     ...parsedStyle(color, size, variant, theme),
-    backgroundColor: theme.palette[color] + 55,
+    backgroundColor: theme.palette[color],
     borderWidth: 1,
     borderStyle: "solid",
     borderColor: theme.palette[color],
+    ...style,
   }));
   return <Block>{children}</Block>;
 }
