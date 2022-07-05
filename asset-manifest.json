@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.248d1ae9.css",
+    "main.js": "/static/js/main.b8012522.js",
+    "static/js/787.4e90c144.chunk.js": "/static/js/787.4e90c144.chunk.js",
+    "static/media/youtubeIcon.svg": "/static/media/youtubeIcon.32cc3068dda8e5c95be75275a5f98c57.svg",
+    "static/media/shortsIcon.svg": "/static/media/shortsIcon.c6e33fb583072c23373fc8df3a51164c.svg",
+    "static/media/searchIcon2.svg": "/static/media/searchIcon2.758e764b9669154ab192be969a37e41e.svg",
+    "static/media/recordIcon.svg": "/static/media/recordIcon.af7bab132fe7447e748316fc7770c6e9.svg",
+    "static/media/bellIcon.svg": "/static/media/bellIcon.8506edd597badbb3093cea6ca5a2e268.svg",
+    "static/media/dotRectIcon.svg": "/static/media/dotRectIcon.3df5e958e285e6547bc628ae0ba1eb7e.svg",
+    "index.html": "/index.html",
+    "static/media/dotMenuIcon.svg": "/static/media/dotMenuIcon.6456fbf2320d221aeb0169ec7b002930.svg",
+    "static/media/plusRecordIcon.svg": "/static/media/plusRecordIcon.9f5daf72d8db8fe0bad47424a560a32d.svg",
+    "static/media/searchIcon.svg": "/static/media/searchIcon.cb5c75df3b9c323c0836ad2d909bbd90.svg",
+    "static/media/subscribeIcon.svg": "/static/media/subscribeIcon.2b9b8ce7f45a4ca091a6fa33e38ee0fc.svg",
+    "static/media/hamburgIcon.svg": "/static/media/hamburgIcon.08128fb314423001b7b94609e9be320d.svg",
+    "main.248d1ae9.css.map": "/static/css/main.248d1ae9.css.map",
+    "main.b8012522.js.map": "/static/js/main.b8012522.js.map",
+    "787.4e90c144.chunk.js.map": "/static/js/787.4e90c144.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.248d1ae9.css",
+    "static/js/main.b8012522.js"
+  ]
+}
